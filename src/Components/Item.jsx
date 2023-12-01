@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
-export const Item = ({ newBorderRadius, newNumber }) => {
+export const Item = ({ newBorderRadius, item }) => {
    return (
       <>
          <div className="item" style={{ borderRadius: newBorderRadius }}>
-            <p>{newNumber}</p>
+            {item.map((i, index) => (
+               <div key={index} className={i}>
+                  {" "}
+               </div>
+            ))}
+            {/* <p className={item}></p> */}
          </div>
       </>
    );
