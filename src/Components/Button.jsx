@@ -1,12 +1,8 @@
-export const Button = ({ handleChange, handleRandom }) => {
+/* eslint-disable react/prop-types */
+export const Button = ({ handleClick, buttonText, btnClass }) => {
    return (
-      <>
-         <button onClick={() => handleChange()} className="btn">
-            change
-         </button>
-         <button onClick={() => handleRandom()} className="btn red">
-            random
-         </button>
-      </>
+      <button onClick={handleClick} className={btnClass}>
+         {buttonText}
+      </button>
    );
 };
